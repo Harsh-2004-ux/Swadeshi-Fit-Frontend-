@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8000/api/vi", // Your backend URL
+  baseURL: "https://swadeshi-fit-backend.onrender.com", // Your backend URL
   headers: {
     "Content-Type": "application/json",
   },
@@ -37,7 +37,7 @@ API.interceptors.response.use(
         // Try to refresh token
         const refreshToken = localStorage.getItem("refreshToken");
         const response = await axios.post(
-          "http://localhost:8000/api/v1/users/refresh-token",
+          "https://swadeshi-fit-backend.onrender.com/api/v1/users/refresh-token",
           { refreshToken },
           { withCredentials: true }
         );
