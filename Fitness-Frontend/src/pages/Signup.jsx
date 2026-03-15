@@ -39,7 +39,7 @@ export default function Signup() {
 
   // API Configuration
   const API = axios.create({
-    baseURL: "http://localhost:8000/api/v1",
+    baseURL: "https://swadeshi-fit-backend.onrender.com/api/v1",
     headers: {
       "Content-Type": "application/json",
     },
